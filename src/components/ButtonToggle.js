@@ -43,13 +43,18 @@ const StyledButtonToggle = styled.div`
         `}
 `
 
-export default function ButtonToggle() {
+export default function ButtonToggle({ onChildClick }) {
     const [click, setClick] = useState(false)
+    
+    function handleClick(){
+        setClick(!click);
+        onChildClick(click);
+    }
 
     return (
         <StyledButtonToggle 
             active = {click} 
-            onClick = {() => setClick(!click)}>
+            onClick = {handleClick}>
             
             <div></div>
             <div></div>

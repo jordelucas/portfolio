@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import ButtonToggle from './components/ButtonToggle'
 import ButtonLanguage from './components/ButtonLanguage'
-import Title from './components/Title'
+import HeaderTitle from './components/HeaderTitle'
 
 const Header = styled.header`
     height: 60px;
@@ -14,11 +14,17 @@ const Header = styled.header`
 `
 
 export default function Home() {
+    const [title, setTitle] = useState('home')
+
+    function handleChildClick(click){
+        click ? setTitle('home') : setTitle('menu')
+    }
+
     return (
         <Header>
             <ButtonLanguage />
-            <Title />
-            <ButtonToggle />
+            <HeaderTitle title={title}/>
+            <ButtonToggle onChildClick={handleChildClick}/>
         </Header>
     )
 }

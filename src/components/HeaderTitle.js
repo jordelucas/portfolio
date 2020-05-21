@@ -8,8 +8,8 @@ const StyledTitle = styled.h1`
     color: #808080;
 `
 
-export default function Title(){
+export default function HeaderTitle(props){
     return (
-        <StyledTitle>Menu</StyledTitle>
+        <StyledTitle>{props.title}</StyledTitle>
     )
 }
