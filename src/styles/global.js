@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`    
     * {
         margin: 0;
         padding: 0;
@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body, input, button {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'IBM Plex Mono', monospace;
     }
 `
 
