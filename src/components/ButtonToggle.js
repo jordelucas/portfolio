@@ -2,33 +2,43 @@ import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 
 const StyledButtonToggle = styled.div`
-    width: 40px;
-    height: 30px;
-    margin-right: 20px;
+    width: 30px;
+    height: 18px;
     cursor: pointer;
 
-    span {
-        display: block;
-        background-color: #fff;
+    &:hover div {
+        background-color: #808080
+    }
+
+    &:focus div {
+        background-color: #ccc
+    }
+
+    div {
+        background-color: #ccc;
         border-radius: 10px;
-        height: 5px;
+        height: 2px;
         width: 100%;
-        margin: 6px auto;
-        transition-duration: 0.3s;
+        margin-bottom: 6px;
+        transition-duration: 0.2s;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     ${({ active }) =>
         active && css`
-            span:first-child {
+            div:first-child {
                 transform: rotate(45deg) translate(7px, 7px);
             }
 
-            span:not(:first-child):not(:last-child) {
+            div:not(:first-child):not(:last-child) {
                 opacity: 0
             }
 
-            span:last-child {
-                transform: rotate(-45deg) translate(8px, -9px);
+            div:last-child {
+                transform: rotate(-45deg) translate(4px, -5px);
             }
         `}
 `
@@ -41,9 +51,9 @@ export default function ButtonToggle() {
             active = {click} 
             onClick = {() => setClick(!click)}>
             
-            <span></span>
-            <span></span>
-            <span></span>
+            <div></div>
+            <div></div>
+            <div></div>
         
         </StyledButtonToggle>
     )
