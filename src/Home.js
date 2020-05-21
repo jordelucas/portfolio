@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import ButtonToggle from './components/ButtonToggle'
 import ButtonLanguage from './components/ButtonLanguage'
+import Title from './components/Title'
 
 const Header = styled.header`
     height: 60px;
@@ -16,6 +17,7 @@ export default function Home() {
     return (
         <Header>
             <ButtonLanguage />
+            <Title />
             <ButtonToggle />
         </Header>
     )
