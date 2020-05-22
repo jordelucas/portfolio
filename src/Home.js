@@ -16,8 +16,8 @@ const Header = styled.header`
 export default function Home() {
     const [title, setTitle] = useState('home')
 
-    function handleChildClick(click){
-        click ? setTitle('home') : setTitle('menu')
+    function handleChildClick(on){
+        on ? setTitle('menu') : setTitle('home')
     }
 
     return (

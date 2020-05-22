@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 
 const StyledButtonToggle = styled.div`
@@ -44,16 +44,19 @@ const StyledButtonToggle = styled.div`
 `
 
 export default function ButtonToggle({ onChildClick }) {
-    const [click, setClick] = useState(false)
+    const [on, setOn] = useState(false)
     
+    useEffect(() => {
+        onChildClick(on);
+    }, [on])
+
     function handleClick(){
-        setClick(!click);
-        onChildClick(click);
+        setOn(!on);
     }
 
     return (
         <StyledButtonToggle 
-            active = {click} 
+            active = {on} 
             onClick = {handleClick}>
             
             <div></div>

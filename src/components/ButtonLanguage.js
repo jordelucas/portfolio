@@ -16,14 +16,14 @@ const StyledLanguage = styled.span`
 export default function ButtonLanguage() {
     const [language, setLanguage] = useState('en')
     
-    function handleState(){
-        const newLanguage =  (language === 'en') ? 'pt' : 'en';
+    function handleLanguage(){
+        const newLanguage = (language === 'en') ? 'pt' : 'en';
         setLanguage(newLanguage)
     }
 
     return (
         <StyledLanguage 
-            onClick={handleState}>
+            onClick={handleLanguage}>
             {language}
         </StyledLanguage>
     )
