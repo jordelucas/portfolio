@@ -16,6 +16,12 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
     }
 
+    .App {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
     body {
         background: #090909;
         -webkit-font-smoothing: antialiased;
