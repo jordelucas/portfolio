@@ -13,18 +13,24 @@ const StyledHeader = styled.header`
     margin: 0 20px;
 `
 
-export default function Header() {
+export default function Header(props) {
     const [title, setTitle] = useState('home')
 
-    function handleChildClick(on){
-        on ? setTitle('menu') : setTitle('home')
+    function changeTitle(on){
+        if (on) {
+            setTitle('menu')
+            props.changePage()
+        } else {
+            setTitle(props.title)
+            props.changePage()
+        } 
     }
 
     return (
         <StyledHeader>
             <ButtonLanguage />
             <HeaderTitle title={title}/>
-            <ButtonToggle onChildClick={handleChildClick}/>
+            <ButtonToggle onChildClick={changeTitle}/>
         </StyledHeader>
     )
 }

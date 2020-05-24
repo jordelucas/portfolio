@@ -1,13 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
+import StyledTitle from '../styles/StyledTitle'
 
-const StyledTitle = styled.h1`
-    color: #fff;
-    text-align: center;
-`
-
-export default function Home() {
+export default function Home(props) {
     return (
-        <StyledTitle>Hi. My name is Jordevá</StyledTitle>
+        <StyledTitle active={props.active}>Hi. My name is Jordevá</StyledTitle>
     )
 }
