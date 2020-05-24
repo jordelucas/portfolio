@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Home from './pages/Home';
 import Nav from './pages/Nav';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import GlobalStyle from './styles/global';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         />
         <Nav active={activeMenu}/>
         <Home active={pages.home} />
+        <Footer />
       </div>
     </>
   );
