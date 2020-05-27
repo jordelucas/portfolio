@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const StyledFooter = styled.footer`
     color: #808080;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     text-transform: uppercase;
     font-weight: bold;
     

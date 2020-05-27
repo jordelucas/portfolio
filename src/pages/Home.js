@@ -1,5 +1,6 @@
 import React from 'react'
 import profile from '../assets/img/profile.jpg'
+import { device } from '../styles/sizeDevice'
 
 import styled, { css } from 'styled-components'
 
@@ -14,6 +15,11 @@ const StyledContainer = styled.main`
         gap: 20px;
         width: 768px;
         margin: auto;
+
+        @media ${device.tablet} {
+            grid-template-columns: 1fr;
+            width: 576px;
+        }
     }
 
     ${({ active }) =>
@@ -26,6 +32,10 @@ const StyledImage = styled.aside`
     img {
         width: 100%;
         max-width: 400px;
+    }
+
+    @media ${device.tablet} {
+        display: none;
     }
 `
 
@@ -45,12 +55,13 @@ const StyledText = styled.div`
 
     button {
         padding: 10px 30px;
-        border: 2px solid #fff;
-        background-color: transparent;
+        font-size: 1.4rem;
         color: #fff;
-        cursor: pointer;
+        background-color: #090909;
+        border: 2px solid #fff;
         text-transform: uppercase;
         transition: 0.5s;
+        cursor: pointer;
 
         &:hover {
             background-color: #fff;
