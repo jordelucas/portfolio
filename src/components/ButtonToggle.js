@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 
 const StyledButtonToggle = styled.div`
-    width: 30px;
-    height: 18px;
+    width: 3.0rem;
+    height: 1.8rem;
     cursor: pointer;
 
     &:hover div {
@@ -17,9 +17,9 @@ const StyledButtonToggle = styled.div`
     div {
         background-color: #ccc;
         border-radius: 10px;
-        height: 2px;
+        height: 0.2rem;
         width: 100%;
-        margin-bottom: 6px;
+        margin-bottom: 0.6rem;
         transition-duration: 0.2s;
 
         &:last-child {
@@ -30,7 +30,7 @@ const StyledButtonToggle = styled.div`
     ${({ active }) =>
         active && css`
             div:first-child {
-                transform: rotate(45deg) translate(7px, 7px);
+                transform: rotate(45deg) translate(0.7rem, 0.7rem);
             }
 
             div:not(:first-child):not(:last-child) {
@@ -38,7 +38,7 @@ const StyledButtonToggle = styled.div`
             }
 
             div:last-child {
-                transform: rotate(-45deg) translate(4px, -5px);
+                transform: rotate(-45deg) translate(0.4rem, -0.5rem);
             }
         `}
 `
