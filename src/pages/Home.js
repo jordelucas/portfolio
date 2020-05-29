@@ -68,6 +68,20 @@ const StyledText = styled.div`
             color: #090909;
         }
     }
+
+    a {
+        display: inline;
+        padding: 0 0 0 20px;
+        color: #808080;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition-duration: 0.3s;
+
+        &:hover {
+            color: #ccc;
+        }
+    }
 `
 
 export default function Home(props) {
@@ -80,6 +94,7 @@ export default function Home(props) {
                     <h1>Hi. My name is Jordevá Lucas.
                         I'm junior frontend developer from Natal.</h1>
                     <button>Contact me</button>
+                    <a href='#'>See my work -></a>
                 </StyledText>
                 
                 <StyledImage>
