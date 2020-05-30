@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaArrowRight } from 'react-icons/fa'
 import profile from '../assets/img/profile.jpg'
 import { device } from '../styles/sizeDevice'
 
@@ -94,7 +95,7 @@ export default function Home(props) {
                     <h1>Hi. My name is Jordevá Lucas.
                         I'm junior frontend developer from Natal.</h1>
                     <button>Contact me</button>
-                    <a href='#'>See my work -></a>
+                    <a href='#'>See my work <FaArrowRight size="1.2rem"/></a>
                 </StyledText>
                 
                 <StyledImage>
