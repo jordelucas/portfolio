@@ -7,7 +7,6 @@ const StyledList = styled.div`
 
     ul {
         margin: auto;
-        color: #fff;
         text-align: center;
         text-transform: uppercase;
         list-style: none;
@@ -15,6 +14,11 @@ const StyledList = styled.div`
         li {
             font-size: 3rem;
             line-height: 6rem;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
         }
     }
 
@@ -28,11 +32,11 @@ export default function Nav(props) {
     return (
         <StyledList active={props.active}>
             <ul>
-                <li>Home</li>
-                <li>About me</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </StyledList>
    )
